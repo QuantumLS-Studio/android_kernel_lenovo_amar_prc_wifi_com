@@ -532,7 +532,7 @@
 	pinctrl-1 = <&i2c0_pins_sleep>;
 	status = "okay";
 
-	rtq2134-regulator {
+	rtq2134-regulator@18 {
 		compatible = "rt, rtq2134";
 		init-reg = <0x4A 0x50
 			    0x52 0x2>;
@@ -549,7 +549,7 @@
 		};
 	};
 
-	rtq5115: rtq5115-regulator {
+	rtq5115: rtq5115-regulator@3f {
 		compatible = "rt, rtq5115";
 		init-reg = <0x28 0x6>;
 		interrupt-controller;
@@ -574,7 +574,7 @@
 	pinctrl-1 = <&i2c1_pins_sleep>;
 	status = "okay";
 
-	rtq2134-regulator {
+	rtq2134-regulator@18 {
 		compatible = "rt, rtq2134";
 		init-reg = <0x4B 0x0
 			    0x52 0x2
