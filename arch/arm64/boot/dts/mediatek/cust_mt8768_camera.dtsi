@@ -105,6 +105,7 @@
 	cam1_enable_sensor = "gc5035kingcome_mipi_raw s5k5e9yx_mipi_raw ov5675_mipi_raw";
 };
 
+/*
 &i2c2 {
 	mtk_camera_eeprom0:camera_eeprom0@58 {
 		compatible = "mediatek,camera_eeprom";
@@ -112,11 +113,11 @@
 		status = "okay";
 	};
 };
+*/
 
 &camera_af_hw_node {
 	camaf_m1_pmic-supply = <&mt_pmic_vldo28_ldo_reg>;
 	status = "okay";
-
 };
 
 /* CAMERA GPIO end */

@@ -478,7 +478,16 @@
 &dsi2 {
 	status = "okay";
 	ports {
-		port {
+		#address-cells = <1>;
+		#size-cells = <0>;
+		port@0 {
+			reg = <0>;
+			dsi2_in: endpoint {
+				remote-endpoint = <&next1>;
+			};
+		};
+		port@1 {
+			reg = <1>;
 			dsi2_out: endpoint {
 				remote-endpoint = <&it6151_i2c2_5c_in>;
 			};
@@ -1916,7 +1925,7 @@
 &rdma1 {
 	port {
 		next1: endpoint {
-			remote-endpoint = <&dsi2_out>;
+			remote-endpoint = <&dsi2_in>;
 		};
 	};
 };
@@ -1939,8 +1948,9 @@
 	pinctrl-0 = <&spi_pins_1>;
 	status = "okay";
 
-	slave {
+	slave0: slave@0 {
 		compatible = "spi-slave-mt27xx-test";
+		reg = <0>;
 	};
 };
 
